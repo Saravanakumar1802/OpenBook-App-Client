@@ -58,11 +58,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/admin/dashboard/upload",
-                element: <UploadBook />
+                element: <PrivateRoute><UploadBook /></PrivateRoute>
             },
             {
                 path: "/admin/dashboard/manage",
-                element: <ManageBooks />
+                element: <PrivateRoute><ManageBooks /></PrivateRoute>
             },
             {
                 path: "/admin/dashboard/manage/:id",
@@ -73,15 +73,15 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: 'sign-up',
+        path: '/sign-up',
         element: <SignUp />
     },
     {
-        path: "login",
+        path: "/login",
         element: <Login />
     },
     {
-        path: "logout",
+        path: "/logout",
         element: <Logout />
     }
 ]);
