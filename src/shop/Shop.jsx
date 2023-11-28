@@ -8,11 +8,8 @@ const Shop = () => {
 
   useEffect(() => {
     axios(`${URL}/all-books`).then(data => setBooks(data.data))
+  }, [])
 
-  })
-
-
-  https://openbook-app-saravana.netlify.app/shop
 
   return (
     <div className='mt-28 px-4 lg:px-24'>
@@ -32,7 +29,14 @@ const Shop = () => {
               Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
             </p>
 
-            <button className='bg-blue-700 font-semibold text-white py-2 rounded'>Buy Now</button>
+           <a
+      href={book.bookPDFURL}
+       target='__blank'
+      className="bg-blue-700 text-center hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    >
+      Buy Now
+    </a>
+
           </Card>)
         }
       </div>
