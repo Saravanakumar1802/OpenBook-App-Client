@@ -6,10 +6,13 @@ import { URL } from '../url';
 const Shop = () => {
   const [books, setBooks] = useState([])
 
-  useEffect(() => {
-    axios(`${URL}/all-books`).then(data => setBooks(data.data))
+  useEffect (() => {
+     axios(`${URL}/all-books`).then(data => setBooks(data.data))
 
-  })
+  }, [])
+
+  
+https://openbook-app-saravana.netlify.app/shop
 
   return (
     <div className='mt-28 px-4 lg:px-24'>
